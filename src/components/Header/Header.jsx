@@ -8,7 +8,7 @@ const Header = (props) => {
                 <button>Some Info 📝</button>
                 {props.isAuth
                     ? <div className={style.block_for_signed}><span>{props.login}</span> |<button className={style.logout_btn} onClick={props.logoutSession}>Log Out ❌</button></div>
-                    : <div className={style.signin_block}><a href={'https://www.instagram.com/shalldon_/'} target={'_blank'}>About 🔥</a></div>}
+                    : <div className={style.signin_block}><a href={'https://www.instagram.com/shalldon_/'} rel='noopener noreferrer' target={'_blank'}>About 🔥</a></div>}
             </div>
         </header>
     )

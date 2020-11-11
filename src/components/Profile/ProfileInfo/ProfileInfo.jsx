@@ -31,7 +31,7 @@ const ProfileInfo = ({profile, status, updateStatus}) => {
     let socialMediaLinks = Object.keys(socialMedia).map(link => {
         let contacts = profile.contacts
         return contacts[link] != null
-            ? <a key={link} href={contacts[link]} target='_blank'>{socialMedia[link]}</a>
+            ? <a key={link} href={contacts[link]} rel='noopener noreferrer' target='_blank'>{socialMedia[link]}</a>
             : null
     })
 

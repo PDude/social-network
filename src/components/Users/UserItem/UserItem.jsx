@@ -30,16 +30,16 @@ const UserItem = ({id, smallImg, bigImg, status, followingInProgress, ...props})
                 </p>
             </div>
             {props.followed
-                ? <button disabled={followingInProgress.some(id => id === id)} onClick={(e) => {
+                ? <button disabled={followingInProgress.some(userId => userId === id)} onClick={(e) => {
                     e.preventDefault()
                     props.unfollowUser(id)
-                }} className={`${style.subscriptionBtn} ${style.followed}`}>Unfollow ✔️</button>
-                : <button disabled={followingInProgress.some(id => id === id)} onClick={(e) => {
+                }} className={`${style.subscriptionBtn} ${style.followed}`}>Unfollow ✔</button>
+                : <button disabled={followingInProgress.some(userId => userId === id)} onClick={(e) => {
                     e.preventDefault()
                     props.followUser(id)
                 }} className={style.subscriptionBtn}>Follow</button>
             }
-            {followingInProgress.some(id => id === id) ? <Preloader /> : null}
+            {followingInProgress.some(userId => userId === id) ? <Preloader /> : null}
         </NavLink >
     )
 }
