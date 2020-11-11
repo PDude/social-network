@@ -5,7 +5,7 @@ import style from './News.module.css'
 const News = () => {
     return (
         <Container>
-            News
+            News for U
         </Container>
     )
 }
