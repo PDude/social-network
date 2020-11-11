@@ -1,0 +1,18 @@
+.form_element.error > * {
+    background: rgb(255 0 0 / 0.3)!important;
+    cursor: help !important;
+    color: #d4d4d4 !important;
+}
+
+.form_element.error > *::placeholder {
+    color: #d4d4d4 !important;
+    opacity: .7 !important;
+}
+
+.form_total_error {
+    background: rgb(255 0 0 / 0.4)!important;
+}
+
+.form_total_error input {
+    cursor: help !important;
+}

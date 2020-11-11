@@ -1,0 +1,54 @@
+.posts {
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+.posts .form_post textarea {
+    width: 100%;
+    height: 60px;
+    resize: none;
+    border-radius: 2px;
+    background: #42484b;
+    border: none;
+    color: #d4d4d4;
+    padding: 15px 100px 15px 15px;
+    overflow: auto;
+    transition: all .2s ease;
+    border-left: 3px solid transparent;
+}
+
+.post_form_textarea {
+    width: 100%;
+}
+
+.posts textarea:focus {
+    border-color: #d4d4d4;
+}
+
+.form_post {
+    margin-bottom: 30px;    
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.form_post button {
+    position: absolute;
+    right: 15px;
+    background: #2f3437;
+    border: none;
+    padding: 10px;
+    color: #d4d4d4;
+    font-weight: 700;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.form_post button:hover {
+    background: rgba(0,0,0, .4);
+}
+
+.posts_wrap {
+    margin-top: 30px;
+}

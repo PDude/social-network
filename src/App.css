@@ -1,0 +1,77 @@
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #2f3437;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+hr {
+    margin: 0 auto;
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 100), rgba(255, 255, 255, 0.1));
+    opacity: .35;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #2f3437;
+    font-size: 14px;
+    letter-spacing: .02em;
+    color: #d4d4d4;
+}
+
+a {
+    text-decoration: none;
+    color: #d4d4d4;
+}
+
+.main_wrap_content {
+    grid-area: c;
+    background: #2f3437;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+
+input, textarea, button {
+    font-family: 'Montserrat', serif;
+    transition: all .2s ease;
+    border: none;
+    background: none;
+    font-size: 14px;
+}
+
+button {
+    cursor: pointer;
+    color: #d4d4d4;
+}
+
+a {
+    transition: all .2s ease;
+}

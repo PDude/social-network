@@ -1,0 +1,7 @@
+.users_wrap {
+    margin-top: 15px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+}

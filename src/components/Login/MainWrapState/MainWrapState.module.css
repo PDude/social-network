@@ -1,0 +1,12 @@
+.main_wrap {
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: "n h" "n c";
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main_wrap.main_wrap_logout {
+    grid-template-areas: "h h" "c c" !important;
+}

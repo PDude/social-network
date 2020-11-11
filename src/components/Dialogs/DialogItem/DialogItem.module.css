@@ -1,0 +1,40 @@
+.dialog {
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 2px;
+    transition: all .2s ease;
+    display: flex;
+}
+
+.dialog p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.dialog:hover {
+    background: rgba(255,255,255, .1);
+}
+
+.dialog.dialog_active {
+    font-weight: 700;
+    background: rgba(255,255,255, .1);
+}
+
+.img_dialog_wrap {
+    overflow: hidden;
+    border-radius: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: #d4d4d4;
+}
+
+.img_dialog_wrap img {
+    width: inherit;
+    object-fit: cover;
+    object-position: center;
+    height: inherit;
+}

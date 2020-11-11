@@ -1,0 +1,30 @@
+.header {
+    grid-area: h;
+    background: #2b2f32;
+}
+
+.additional_info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+    height: 100%;    
+}
+
+.additional_info button, .additional_info a {
+    padding: 3px 6px;
+    border-radius: 2px;
+}
+
+.additional_info button:hover, .additional_info a:hover {
+    background: rgba(255,255,255, .1);
+}
+
+.block_for_signed span {
+    font-weight: 700;
+}
+
+.logout_btn {
+    font-size: 12px;
+    opacity: .8;
+}

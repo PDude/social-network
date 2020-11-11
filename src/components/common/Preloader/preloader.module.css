@@ -1,0 +1,19 @@
+.preloader {
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* right: 1%; */
+    /* bottom: 2vh; */
+    right: 20px;
+    bottom: 20px;
+    transition: all .2s ease;
+    background: rgb(0 0 0 / .1);
+    border-radius: 50%;
+}
+
+.preloader img {
+    width: 30px;
+    /* height: 3vh; */
+}

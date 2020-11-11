@@ -1,0 +1,64 @@
+.dialogs_content {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 50px;
+    height: calc(100vh - 150px);
+    margin-top: 50px;
+}
+
+.dialogs_items, .messages_content {
+    overflow-y: auto;   
+}
+
+.messages_content {
+    padding-right: 15px;
+}
+
+.form_message textarea {
+    width: 100%;
+    height: 60px;
+    resize: none;
+    border-radius: 2px;
+    background: #42484b;
+    border: none;
+    color: #d4d4d4;
+    padding: 15px 100px 15px 15px;
+    overflow: auto;
+    transition: all .2s ease;
+    border-left: 3px solid transparent;
+}
+
+.message_form_textarea {
+    width: 100%;
+    position: relative;
+}
+
+.form_message textarea:focus {
+    border-color: #d4d4d4;
+}
+
+.form_message {  
+    display: flex;
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+    background: #2f3437;
+    margin-top: 50px;   
+}
+
+.form_message button {
+    position: absolute;
+    right: 15px;
+    background: #2f3437;
+    border: none;
+    padding: 10px;
+    color: #d4d4d4;
+    font-weight: 700;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.form_message button:hover {
+    background: rgba(0,0,0, .4);
+}

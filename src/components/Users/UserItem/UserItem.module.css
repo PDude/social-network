@@ -1,0 +1,110 @@
+.user_item {
+    border-radius: 2px;
+    background: #2b2f32;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .2s ease;
+    padding-bottom: 20px;
+}
+
+.user_item:hover {
+    background: #202324;
+}
+
+.user_item:hover .cover_img_wrap {
+    filter: brightness(.9);
+}
+
+.cover_img_wrap {
+    transition: all .2s ease;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    filter: brightness(.6);
+    position: relative;
+}
+
+.cover_img_wrap img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile_img_wrap {
+    width: 75px;
+    height: 75px;
+    position: relative;
+    z-index: 10;
+    min-width: 75px;
+    min-height: 75px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: -37.5px auto 0;
+    object-position: center;
+}
+
+.profile_img_wrap img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    object-position: center;
+}
+
+.user_info {
+    padding: 0 15px;
+}
+
+.user_info > * {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.name {
+    font-size: 18px;
+    margin: 10px 0; 
+    text-transform: capitalize;
+}
+
+.status {
+    font-size: 12px;
+    
+}
+
+.location {
+    font-size: 10px;
+    margin-top: 2px;
+    opacity: .8;
+    font-weight: 300;
+}
+
+.subscriptionBtn {
+    margin: 15px auto 0;
+    background: none;
+    color: #d4d4d4;
+    border: 2px solid #d4d4d4;
+    border-radius: 40px;
+    transition: all .2s ease;
+    font-weight: 700;
+    cursor: pointer;
+    width: 78px;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subscriptionBtn.followed {
+    background: rgb(34 177 76 / .3);
+    width: 108px;
+    padding-left: 5px;
+}
+
+.subscriptionBtn:hover {
+    color: #202324;
+    background-color: #d4d4d4;
+}
