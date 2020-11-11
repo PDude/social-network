@@ -1,7 +1,6 @@
 import React from 'react'
 import Container from '../common/Container/Container'
 import Paginator from '../common/Paginator/Paginator'
-import Preloader from '../common/Preloader/Preloader'
 import UserItem from './UserItem/UserItem'
 import style from './Users.module.css'
 

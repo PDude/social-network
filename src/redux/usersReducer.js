@@ -66,7 +66,7 @@ const followSuccess = (userId) => ({ type: FOLLOW_USER, userId })
 const unfollowSuccess = (userId) => ({ type: UNFOLLOW_USER, userId })
 const setUsers = (users) => ({ type: SET_USERS, users })
 export const setCurrentPage = (currentPage) => ({ type: SET_CURRENT_PAGE, currentPage })
-const settotalItemsCount = (totalItemsCount) => ({ type: SET_TOTAL_USERS_COUNT, totalItemsCount })
+const setTotalItemsCount = (totalItemsCount) => ({ type: SET_TOTAL_USERS_COUNT, totalItemsCount })
 const toggleIsFetching = (isFetching) => ({ type: TOGGLE_IS_FETCHING, isFetching })
 export const toggleIsFollowingProgress = (isFetching, userId) => ({ type: TOGGLE_IS_FOLLOWING_PROGRESS, isFetching, userId })
 
@@ -76,7 +76,7 @@ export const requestUsers = (page, pageSize) => async (dispatch) => {
 
     let data = await usersAPI.getUsers(page, pageSize)
     dispatch(setUsers(data.items))
-    dispatch(settotalItemsCount(data.totalCount))
+    dispatch(setTotalItemsCount(data.totalCount))
     dispatch(toggleIsFetching(false))
 }
 
