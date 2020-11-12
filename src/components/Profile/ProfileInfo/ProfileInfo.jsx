@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Container from '../../common/Container/Container'
 import Preloader from '../../common/Preloader/Preloader'
 import style from './ProfileInfo.module.css'
@@ -8,7 +8,7 @@ import { FaFacebookSquare, FaExternalLinkSquareAlt, FaVk, FaTwitterSquare, FaIns
 import { ImBookmark } from 'react-icons/im'
 import ProfileStatusHooks from './ProfileStatusHooks'
 
-const ProfileInfo = ({profile, status, updateStatus}) => {
+const ProfileInfo = ({ profile, status, updateStatus, isOwner, savePhoto }) => {
 
     if (!profile) return <Preloader />
 
@@ -30,12 +30,20 @@ const ProfileInfo = ({profile, status, updateStatus}) => {
             : null
     })
 
+    const onMainPhotoSelected = (e) => {
+        if (e.target.files.length) savePhoto(e.target.files[0])
+    }
+
     return (
         <div className={style.avatar_info}>
             <div className={style.cover_img} style={{ backgroundImage: `url(${profile.photos.large || coverPhoto})` }} />
             <Container>
                 <div className={style.avatar_jobStatus}>
                     <div className={style.avatar_wrap}>
+                        {isOwner && <>
+                            <input id={'file_profile_img'} type='file' onChange={onMainPhotoSelected} />
+                            <label htmlFor={'file_profile_img'} />
+                        </>}
                         <img src={profile.photos.small || userPhoto} alt='' />
                     </div>
                     {profile.lookingForAJob

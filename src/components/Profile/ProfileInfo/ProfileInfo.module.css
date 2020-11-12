@@ -15,6 +15,46 @@
     object-position: center;
 }
 
+.avatar_wrap input {
+    display: none;
+}
+
+.avatar_wrap label {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: rgba(0 0 0 / .4);
+    cursor: pointer;
+    transition: all .2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: inherit;
+}
+
+.avatar_wrap label:before {
+    content: 'edit';
+    transform: translateY(3px);
+    color: #fff;
+    z-index: 10;
+    transition: all .2s ease;
+    font-weight: 500;
+}
+
+.avatar_wrap:hover label {
+    opacity: 1;
+    visibility: visible;
+}
+
+.avatar_wrap:hover label:before {
+    transform: translateY(0);
+}
+
 .status_section > * {
     letter-spacing: 0;
     padding: 5px 0;
@@ -102,3 +142,4 @@
 .dont_looking_job {
     color: #c23b22;
 }   
+
