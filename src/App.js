@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import { Route, withRouter, BrowserRouter } from 'react-router-dom'
+import { Route, withRouter, HashRouter } from 'react-router-dom'
 import store from './redux/reduxStore'
 import { Provider } from 'react-redux'
 // import ProfileContainer from './components/Profile/ProfileContainer'
@@ -31,7 +31,7 @@ class App extends React.Component {
   render() {
     if (!this.props.initialized) {
       return <Preloader />
-    }
+    }  
     return (
       <MainWrapStateContainer>
         <HeaderContainer />
@@ -60,12 +60,12 @@ const AppContainer = compose(
 )(App)
 
 const MainApp = (props) => {
-  return (
-    <BrowserRouter>
+  return ( 
+    <HashRouter>
       <Provider store={store}>
         <AppContainer />
       </Provider>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

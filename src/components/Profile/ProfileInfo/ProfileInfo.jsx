@@ -12,11 +12,6 @@ const ProfileInfo = ({profile, status, updateStatus}) => {
 
     if (!profile) return <Preloader />
 
-    let backgroundImage
-    profile.photos.large != null
-        ? backgroundImage = profile.photos.large
-        : backgroundImage = coverPhoto
-
     let socialMedia = {
         facebook: <FaFacebookSquare />,
         website: <FaExternalLinkSquareAlt />,
@@ -37,13 +32,11 @@ const ProfileInfo = ({profile, status, updateStatus}) => {
 
     return (
         <div className={style.avatar_info}>
-            <div className={style.cover_img} style={{ backgroundImage: `url(${backgroundImage})` }} />
+            <div className={style.cover_img} style={{ backgroundImage: `url(${profile.photos.large || coverPhoto})` }} />
             <Container>
                 <div className={style.avatar_jobStatus}>
                     <div className={style.avatar_wrap}>
-                        <img src={profile.photos.small != null
-                            ? profile.photos.small
-                            : userPhoto} alt='' />
+                        <img src={profile.photos.small || userPhoto} alt='' />
                     </div>
                     {profile.lookingForAJob
                         ? <span className={style.looking_job} title='I Am Looking For A Job '><ImBookmark /></span>
