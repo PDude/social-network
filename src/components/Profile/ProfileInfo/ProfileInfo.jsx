@@ -34,6 +34,10 @@ const ProfileInfo = ({ profile, status, updateStatus, isOwner, savePhoto }) => {
         if (e.target.files.length) savePhoto(e.target.files[0])
     }
 
+    // !
+    // Page doesn't re-render after uploading file (photo)
+    // !
+
     return (
         <div className={style.avatar_info}>
             <div className={style.cover_img} style={{ backgroundImage: `url(${profile.photos.large || coverPhoto})` }} />

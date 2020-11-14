@@ -77,6 +77,8 @@ export const profileAPI = {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
+        }).then(response => {
+            return response.data
         })
     }
 }
