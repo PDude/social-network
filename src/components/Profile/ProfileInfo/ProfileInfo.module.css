@@ -140,7 +140,7 @@
 }
 
 .looking_for_job:hover, .about_me:hover  {
-    background: rgba(0 0 0 / .15);
+    background: #282c2f;
 }
 
 .looking_for_job b {
@@ -155,14 +155,16 @@
 
 .profile_info_wrap {
     margin: 20px 0 25px;
+    border-radius: 2px;
+    padding: 10px;
+    background: #ffffff05;
+}
+
+.profile_info_wrap_with_about {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 15px;
     align-items: flex-start;
-}
-
-.profile_info_wrap_no_about {
-    margin: 20px 0 25px;
 }
 
 .about_me {

@@ -45,7 +45,7 @@ const ProfileData = ({ profile, ...props }) => {
             <h2>
                 {profile.fullName}
             </h2>
-            <div className={profile.aboutMe !== null ? style.profile_info_wrap : style.profile_info_wrap_no_about}>
+            <div className={profile.aboutMe !== null ? `${style.profile_info_wrap_with_about} ${style.profile_info_wrap}` : style.profile_info_wrap}>
                 <div className={style.status_and_job}>
                     {/* Status */}
                     {props.children}
