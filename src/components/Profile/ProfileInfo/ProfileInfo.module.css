@@ -62,19 +62,21 @@
     color: #2f3437;
     background: #d4d4d4;
     padding: 5px 10px;
-    width: 50%;
     border-radius: 2px;
+    width: 100%;
 }   
 
 .status_text {
     cursor: pointer;
-    width: max-content;
+    max-width: max-content;
+}
+
+.profile_desc {
+    margin-top: 35px;
 }
 
 .profile_desc h2 {
     font-size: 25px;
-    margin-bottom: 5px;
-    margin-top: 35px;
     text-transform: capitalize;
 }
 
@@ -94,6 +96,11 @@
     display: flex;
     margin-left: -3px;
     max-width: max-content;
+    margin-bottom: 15px;
+}
+
+.social_media:empty {
+    display: none;
 }
 
 .social_media a {
@@ -115,23 +122,6 @@
     opacity: 1 !important;
 }
 
-.avatar_jobStatus {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.avatar_jobStatus span {
-    font-size: 35px;
-    transition: all .2s ease;
-    opacity: .9;
-    cursor: help;
-}
-
-.avatar_jobStatus span:hover {
-    opacity: 1;
-}
-
 .looking_job {
     color: #22bb45;
 }
@@ -140,3 +130,55 @@
     color: #c23b22;
 }   
 
+.looking_for_job {
+    margin-top: 15px;
+    background: #2b2f32;
+    padding: 15px;
+    border-radius: 2px;
+    max-width: max-content;
+    transition: all .2s ease;
+}
+
+.looking_for_job:hover, .about_me:hover  {
+    background: rgba(0 0 0 / .15);
+}
+
+.looking_for_job b {
+    font-size: 12px;
+}
+
+.looking_for_job p {
+    font-size: 12px;
+    opacity: .8;
+    margin-top: 5px;
+}
+
+.profile_info_wrap {
+    margin: 20px 0 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    align-items: flex-start;
+}
+
+.profile_info_wrap_no_about {
+    margin: 20px 0 25px;
+}
+
+.about_me {
+    padding: 15px;
+    border-radius: 2px;
+    background: #2b2f32;
+    transition: all .2s ease;
+    max-width: max-content;
+}
+
+.about_me b {
+    font-size: 12px;
+}
+
+.about_me p {
+    font-size: 12px;
+    opacity: .8;
+    margin-top: 5px;
+}

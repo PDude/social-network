@@ -20,8 +20,14 @@
     background: rgba(255,255,255, .1);
 }
 
+.block_for_signed {
+    display: flex;
+    align-items: center;
+}
+
 .block_for_signed span {
     font-weight: 700;
+    margin-right: 7px;
 }
 
 .logout_btn {
