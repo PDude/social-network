@@ -1,0 +1,69 @@
+.profile_data_form {
+    margin: 35px 0 25px ;
+    border-radius: 2px;
+    padding: 15px;
+    background: #ffffff05;
+}
+
+.full_name_and_save {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.full_name_and_save input {
+    width: 250px;
+}
+
+.save_btn {
+    font-size: 12px;
+    border-radius: 2px;
+    padding: 3px 6px;
+    animation: move_down_left .2s 1 ease forwards;
+}
+
+@keyframes move_down_left {
+    0% {
+        transform: translate(15px, -15px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+.save_btn:hover {
+    background: rgba(255 255 255 / .1);
+}
+
+.looking_job_block {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    margin-top: 15px;
+    position: relative;
+}
+
+.looking_job_block label {
+    padding-left: 10px;
+    cursor: pointer;
+    opacity: .8;
+    font-size: 12px;
+}
+
+.job_and_about {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.job_and_about textarea {
+    height: 80px;
+}
+
+.profile_data_form b {
+    font-size: 12px;
+    margin-bottom: 10px;
+    display: block;
+}

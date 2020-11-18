@@ -52,6 +52,14 @@
     opacity: 1;
 }
 
+.status_and_job {
+    width: 100%;
+}
+
+.status_section {
+    margin: 5px 0 15px;
+}
+
 .status_section > * {
     letter-spacing: 0;
     padding: 5px 0;
@@ -73,6 +81,35 @@
 
 .profile_desc {
     margin-top: 35px;
+    margin-bottom: 25px;
+}
+
+.full_name_and_edit {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.edit_mode_btn {
+    font-size: 12px;
+    border-radius: 2px;
+    padding: 3px 6px;
+    animation: move_up_right .2s 1 ease forwards;
+    position: relative;
+}
+
+@keyframes move_up_right {
+    0% {
+        transform: translate(-15px, 15px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+.edit_mode_btn:hover {
+    background: rgba(255 255 255 / .1);
 }
 
 .profile_desc h2 {
@@ -96,7 +133,6 @@
     display: flex;
     margin-left: -3px;
     max-width: max-content;
-    margin-bottom: 15px;
 }
 
 .social_media:empty {
@@ -131,11 +167,9 @@
 }   
 
 .looking_for_job {
-    margin-top: 15px;
     background: #2b2f32;
     padding: 15px;
     border-radius: 2px;
-    max-width: max-content;
     transition: all .2s ease;
 }
 
@@ -154,25 +188,20 @@
 }
 
 .profile_info_wrap {
-    margin: 20px 0 25px;
     border-radius: 2px;
-    padding: 10px;
+    padding: 15px;
     background: #ffffff05;
-}
-
-.profile_info_wrap_with_about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     grid-gap: 15px;
     align-items: flex-start;
 }
 
 .about_me {
+    width: 100%;
     padding: 15px;
     border-radius: 2px;
     background: #2b2f32;
     transition: all .2s ease;
-    max-width: max-content;
 }
 
 .about_me b {

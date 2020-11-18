@@ -27,8 +27,8 @@ const LoginForm = ({handleSubmit, error}) => {
                 </div>  
                 <div className={style.remember_me_wrap}>
                     <div className={style.remember_me}>
-                        <Field name={'remember_me'} component={Input} id={'checkbox_id'} type={'checkbox'} />
-                        <label htmlFor={'checkbox_id'}>Remember Me</label>
+                        <Field name={'remember_me'} component={Input} id={'remember_me'} type={'checkbox'} />
+                        <label htmlFor={'remember_me'}>Remember Me</label>
                     </div>
                 </div>
                 <button className={style.login_btn}>

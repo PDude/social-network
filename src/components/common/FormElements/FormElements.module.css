@@ -16,3 +16,58 @@
 .form_total_error input {
     cursor: help !important;
 }
+
+.form_element input {
+    border-radius: 2px;
+    color: #d4d4d4;
+    padding: 10px 0;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.form_element input::placeholder {
+    transition: all .3s ease;
+}
+
+.form_element input:focus::placeholder {
+    color: #2b2f32;
+    opacity: .7;
+}
+
+.form_element input:focus {
+    background: #d4d4d4;
+    color: #2b2f32;
+    padding: 10px;
+}
+
+.form_element input[type=checkbox], .form_element input[type=checkbox]:hover, .form_element input[type=checkbox]:focus {
+    border-radius: initial;
+    color: initial;
+    padding: initial;
+    border-bottom: initial;
+}
+
+.form_element input[type=checkbox] {
+    cursor: pointer;
+    opacity: .9;
+    position: relative;
+}
+
+input[type=checkbox]:focus {
+    filter: invert(1);
+}
+
+.form_element textarea {
+    height: 60px;
+    resize: none;
+    width: 100%;
+    border-radius: 2px;
+    background: #42484b;
+    color: #d4d4d4;
+    padding: 15px;
+    overflow: auto;
+    border-left: 3px solid transparent;
+}
+
+.form_element textarea:focus {
+    border-color: #d4d4d4;
+}

@@ -79,26 +79,7 @@
 }
 
 .form_input input {
-    width: 250px;
-    border-radius: 2px;
-    color: #d4d4d4;
-    padding: 10px 0;
-    border-bottom: 1px solid #d4d4d4;
-}
-
-.login_form input::placeholder {
-    transition: all .3s ease;
-}
-
-.login_form input:focus::placeholder {
-    color: #2b2f32;
-    opacity: .7;
-}
-
-.login_form input:focus {
-    background: #d4d4d4;
-    color: #2b2f32;
-    padding: 10px;
+    width: 250px !important;
 }
 
 .login_btn {
@@ -212,19 +193,9 @@
     width: max-content;
 }
 
-.remember_me input {
-    cursor: pointer;
-    opacity: .9;
-    position: relative;
-}
-
 .remember_me label {
     padding-left: 10px;
     cursor: pointer;
     opacity: .8;
     font-size: 12px;
-}
-
-.remember_me input:focus {
-    filter: invert(1);
 }
