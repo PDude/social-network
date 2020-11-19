@@ -19,8 +19,9 @@ const ProfileInfo = ({ profile, status, updateStatus, isOwner, savePhoto, savePr
     }
 
     const onSubmit = (formData) => {
-        saveProfile(formData)
-        setEditMode(false)
+        saveProfile(formData).then(() => {
+            setEditMode(false)
+        })
     }
 
     return (
@@ -100,7 +101,7 @@ export const Contacts = (props) => {
     }
 
     let socialMediaLinks = Object.keys(socialMedia).filter(link => {
-        return contacts[link] != null
+        return contacts[link]
     }).map(link => {
         return <a key={link} href={contacts[link]} rel='noopener noreferrer' target='_blank'>{socialMedia[link]}</a>
     })

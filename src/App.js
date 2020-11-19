@@ -1,6 +1,8 @@
 import React from 'react'
 import './App.css'
-import { Route, withRouter, HashRouter } from 'react-router-dom'
+import { Route, withRouter, Switch, Redirect } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
+import { BrowserRouter }from 'react-router-dom'
 import store from './redux/reduxStore'
 import { Provider } from 'react-redux'
 // import ProfileContainer from './components/Profile/ProfileContainer'
@@ -18,6 +20,7 @@ import { compose } from 'redux'
 import { settingInitialization } from './redux/appReducer'
 import Preloader from './components/common/Preloader/Preloader'
 import { withSuspense } from './hoc/withSuspense'
+import NotFoundPage from './components/NotFoundPage/NotFoundPage'
 
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'))
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'))
@@ -31,19 +34,26 @@ class App extends React.Component {
   render() {
     if (!this.props.initialized) {
       return <Preloader />
-    }  
+    }
     return (
       <MainWrapStateContainer>
         <HeaderContainer />
         <SidebarContainer />
         <div className='main_wrap_content'>
-          <Route path='/profile/:userId?' render={withSuspense(ProfileContainer)} />
-          <Route path='/dialogs' render={withSuspense(DialogsContainer)} />
-          <Route path='/users' render={withSuspense(UsersContainer)} />
-          <Route path='/login' render={() => <LoginContainer />} />
-          <Route path='/news' render={() => <NewsContainer />} />
-          <Route path='/music' render={() => <MusicContainer />} />
-          <Route path='/settings' render={() => <SettingsContainer />} />
+
+          <Switch>
+            <Route path='/profile/:userId?' render={withSuspense(ProfileContainer)} />
+            <Route path='/dialogs' render={withSuspense(DialogsContainer)} />
+            <Route path='/users' render={withSuspense(UsersContainer)} />
+            <Route path='/login/google' render={() => <div>Login through Google</div>} />
+            <Route path='/login' render={() => <LoginContainer />} />
+            <Route path='/news' render={() => <NewsContainer />} />
+            <Route path='/music' render={() => <MusicContainer />} />
+            <Route path='/settings' render={() => <SettingsContainer />} />
+            <Redirect exact from='/' to='/profile' />
+            <Route path='*' render={() => <NotFoundPage />} />
+          </Switch>
+
         </div>
       </MainWrapStateContainer>
     )
@@ -60,12 +70,14 @@ const AppContainer = compose(
 )(App)
 
 const MainApp = (props) => {
-  return ( 
-    <HashRouter>
+  return (
+    // <HashRouter>
+    <BrowserRouter>
       <Provider store={store}>
         <AppContainer />
       </Provider>
-    </HashRouter>
+      {/* </HashRouter> */}
+    </BrowserRouter>
   )
 }
 

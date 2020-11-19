@@ -199,3 +199,44 @@
     opacity: .8;
     font-size: 12px;
 }
+
+/* Captcha Styles */
+
+.captcha_block {
+    position: fixed;
+    width: 100%;
+    max-width: 300px;
+    background: rgba(0, 0, 0, .8);
+    top: 0;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: slideUp .3s 1 ease forwards;
+    border-radius: 0 0 2px 2px;
+}
+
+.captcha_input {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.captcha_input input {
+    text-align: center;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Captcha Styles */
+

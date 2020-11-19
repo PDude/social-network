@@ -9,7 +9,7 @@ import styleFormEl from '../common/FormElements/FormElements.module.css'
 
 const maxLength30 = maxLengthCreator(30)
 
-const LoginForm = ({handleSubmit, error}) => {
+const LoginForm = ({ handleSubmit, error, captchaUrl }) => {
     return (
         <>
             <form onSubmit={handleSubmit} className={!error ? style.login_form : `${style.login_form} ${styleFormEl.form_total_error}`}>
@@ -20,11 +20,11 @@ const LoginForm = ({handleSubmit, error}) => {
                     👋
                 </b>
                 <div className={style.form_input}>
-                    <Field title={error ? error : undefined} name={'email'} className={style.email_input} type={'email'} placeholder='Enter Your Email' component={Input} validate={[requiredFiled, maxLength30]} />
+                    <Field title={error ? error : undefined} name={'email'} className={style.email_input} type={'email'} placeholder='Enter your email' component={Input} validate={[requiredFiled, maxLength30]} />
                 </div>
                 <div className={style.form_input}>
-                    <Field title={error ? error : undefined} name={'password'} className={style.pass_input} type={'password'} placeholder='Enter Your Password' component={Input} validate={[requiredFiled, maxLength30]} />
-                </div>  
+                    <Field title={error ? error : undefined} name={'password'} className={style.pass_input} type={'password'} placeholder='Enter your password' component={Input} validate={[requiredFiled, maxLength30]} />
+                </div>
                 <div className={style.remember_me_wrap}>
                     <div className={style.remember_me}>
                         <Field name={'remember_me'} component={Input} id={'remember_me'} type={'checkbox'} />
@@ -48,6 +48,14 @@ const LoginForm = ({handleSubmit, error}) => {
                 </button>
             </form>
             {error && <Alert text={error} />}
+
+            { captchaUrl &&
+                <div className={style.captcha_block}>
+                    <img src={captchaUrl} alt='captcha' />
+                    <div className={style.captcha_input}>
+                        <Field title={error ? error : undefined} name={'captcha'} className={style.pass_input} type={'text'} placeholder='Enter symbols' component={Input} validate={[requiredFiled]} />
+                    </div>
+                </div>}
         </>
     )
 }

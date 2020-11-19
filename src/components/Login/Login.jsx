@@ -9,7 +9,7 @@ const LoginReduxForm = reduxForm({ form: 'login' })(LoginForm)
 
 const Login = (props) => {
     const onSubmit = (formData) => {
-        props.loginSession(formData.email, formData.password, formData.remember_me)
+        props.loginSession(formData.email, formData.password, formData.remember_me, formData.captcha)
     }
 
     return (
@@ -19,7 +19,7 @@ const Login = (props) => {
                 : <div className={style.bg_rotation}>
                     <Container>
                         <section className={style.login_wrap}>
-                            <LoginReduxForm onSubmit={onSubmit} />
+                            <LoginReduxForm onSubmit={onSubmit} captchaUrl={props.captchaUrl} />
                         </section>
                     </Container>
                 </div>
