@@ -71,13 +71,13 @@ const AppContainer = compose(
 
 const MainApp = (props) => {
   return (
-    // <HashRouter>
-    <BrowserRouter>
+    <HashRouter>
+    {/* <BrowserRouter> */}
       <Provider store={store}>
         <AppContainer />
       </Provider>
-      {/* </HashRouter> */}
-    </BrowserRouter>
+      </HashRouter>
+    // </BrowserRouter>
   )
 }
 
