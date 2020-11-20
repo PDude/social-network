@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 import { Route, withRouter, Switch, Redirect } from 'react-router-dom'
 import { HashRouter } from 'react-router-dom'
-import { BrowserRouter }from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import store from './redux/reduxStore'
 import { Provider } from 'react-redux'
 // import ProfileContainer from './components/Profile/ProfileContainer'
@@ -27,8 +27,17 @@ const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsCo
 const UsersContainer = React.lazy(() => import('./components/Users/UsersContainer'))
 
 class App extends React.Component {
+  catchAllUnhandledErrors = (promiseRejectionEvent) => {
+    alert('Error')  
+  }
+
   componentDidMount = () => {
     this.props.settingInitialization()
+    window.addEventListener('unhandledrejection', this.catchAllUnhandledErrors)
+  }
+
+  componentWillUnmount = () => {
+    window.removeEventListener('unhandledrejection', this.catchAllUnhandledErrors)
   }
 
   render() {
@@ -72,11 +81,11 @@ const AppContainer = compose(
 const MainApp = (props) => {
   return (
     <HashRouter>
-    {/* <BrowserRouter> */}
+      {/* <BrowserRouter> */}
       <Provider store={store}>
         <AppContainer />
       </Provider>
-      </HashRouter>
+    </HashRouter>
     // </BrowserRouter>
   )
 }
