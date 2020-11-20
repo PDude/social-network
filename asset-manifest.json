@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/social-network/static/css/main.8e557192.chunk.css",
-    "main.js": "/social-network/static/js/main.79c7d9a4.chunk.js",
-    "main.js.map": "/social-network/static/js/main.79c7d9a4.chunk.js.map",
+    "main.css": "/social-network/static/css/main.d81aa682.chunk.css",
+    "main.js": "/social-network/static/js/main.04145ae0.chunk.js",
+    "main.js.map": "/social-network/static/js/main.04145ae0.chunk.js.map",
     "runtime-main.js": "/social-network/static/js/runtime-main.f799f077.js",
     "runtime-main.js.map": "/social-network/static/js/runtime-main.f799f077.js.map",
     "static/js/2.2c87e15e.chunk.js": "/social-network/static/js/2.2c87e15e.chunk.js",
@@ -17,12 +17,12 @@
     "static/js/5.18a04443.chunk.js": "/social-network/static/js/5.18a04443.chunk.js",
     "static/js/5.18a04443.chunk.js.map": "/social-network/static/js/5.18a04443.chunk.js.map",
     "index.html": "/social-network/index.html",
-    "precache-manifest.eeab09e1f22b7553569237d9e8e7027b.js": "/social-network/precache-manifest.eeab09e1f22b7553569237d9e8e7027b.js",
+    "precache-manifest.d6e2e4a08a8af08e79c88fda25947df6.js": "/social-network/precache-manifest.d6e2e4a08a8af08e79c88fda25947df6.js",
     "service-worker.js": "/social-network/service-worker.js",
     "static/css/3.ff42882b.chunk.css.map": "/social-network/static/css/3.ff42882b.chunk.css.map",
     "static/css/4.36bac783.chunk.css.map": "/social-network/static/css/4.36bac783.chunk.css.map",
     "static/css/5.6dcdc75c.chunk.css.map": "/social-network/static/css/5.6dcdc75c.chunk.css.map",
-    "static/css/main.8e557192.chunk.css.map": "/social-network/static/css/main.8e557192.chunk.css.map",
+    "static/css/main.d81aa682.chunk.css.map": "/social-network/static/css/main.d81aa682.chunk.css.map",
     "static/js/2.2c87e15e.chunk.js.LICENSE.txt": "/social-network/static/js/2.2c87e15e.chunk.js.LICENSE.txt",
     "static/js/4.6ae268d7.chunk.js.LICENSE.txt": "/social-network/static/js/4.6ae268d7.chunk.js.LICENSE.txt",
     "static/media/cover_img.jfif": "/social-network/static/media/cover_img.7618a1c6.jfif",
@@ -32,7 +32,7 @@
   "entrypoints": [
     "static/js/runtime-main.f799f077.js",
     "static/js/2.2c87e15e.chunk.js",
-    "static/css/main.8e557192.chunk.css",
-    "static/js/main.79c7d9a4.chunk.js"
+    "static/css/main.d81aa682.chunk.css",
+    "static/js/main.04145ae0.chunk.js"
   ]
 }
