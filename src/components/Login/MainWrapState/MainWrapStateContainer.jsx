@@ -5,18 +5,14 @@ import { withAuthPassState } from '../../../hoc/WithAuth/withAuthPassState'
 import MainWrapState from './MainWrapState'
 
 class MainWrapStateContainer extends React.Component {
-    render() {
-        return (
-            <MainWrapState {...this.props}>
-                {this.props.children}
-            </MainWrapState>
-        )
-    }
+  render() {
+    return <MainWrapState {...this.props}>{this.props.children}</MainWrapState>
+  }
 }
 
 let mapStateToProps = (state) => ({})
 
 export default compose(
-    connect(mapStateToProps, {}),
-    withAuthPassState
-)(MainWrapStateContainer) 
+  connect(mapStateToProps, {}),
+  withAuthPassState
+)(MainWrapStateContainer)

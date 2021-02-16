@@ -7,7 +7,7 @@ import store from './redux/reduxStore'
 import { Provider } from 'react-redux'
 // import ProfileContainer from './components/Profile/ProfileContainer'
 // import DialogsContainer from './components/Dialogs/DialogsContainer'
-// import UsersContainer from './components/Users/UsersContainer'
+import UsersContainer from './components/Users/UsersContainer'
 import HeaderContainer from './components/Header/HeaderContainer'
 import NewsContainer from './components/News/NewsContainer'
 import MusicContainer from './components/Music/MusicContainer'
@@ -22,13 +22,19 @@ import Preloader from './components/common/Preloader/Preloader'
 import { withSuspense } from './hoc/withSuspense'
 import NotFoundPage from './components/NotFoundPage/NotFoundPage'
 
-const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'))
-const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'))
-const UsersContainer = React.lazy(() => import('./components/Users/UsersContainer'))
+const ProfileContainer = React.lazy(() =>
+  import('./components/Profile/ProfileContainer')
+)
+const DialogsContainer = React.lazy(() =>
+  import('./components/Dialogs/DialogsContainer')
+)
+// const UsersContainer = React.lazy(() =>
+//   import('./components/Users/UsersContainer')
+// )
 
 class App extends React.Component {
   catchAllUnhandledErrors = (promiseRejectionEvent) => {
-    alert('Error')  
+    alert('Error')
   }
 
   componentDidMount = () => {
@@ -37,7 +43,10 @@ class App extends React.Component {
   }
 
   componentWillUnmount = () => {
-    window.removeEventListener('unhandledrejection', this.catchAllUnhandledErrors)
+    window.removeEventListener(
+      'unhandledrejection',
+      this.catchAllUnhandledErrors
+    )
   }
 
   render() {
@@ -49,12 +58,20 @@ class App extends React.Component {
         <HeaderContainer />
         <SidebarContainer />
         <div className='main_wrap_content'>
-
           <Switch>
-            <Route path='/profile/:userId?' render={withSuspense(ProfileContainer)} />
+            <Route
+              path='/profile/:userId?'
+              render={withSuspense(ProfileContainer)}
+            />
             <Route path='/dialogs' render={withSuspense(DialogsContainer)} />
-            <Route path='/users' render={withSuspense(UsersContainer)} />
-            <Route path='/login/google' render={() => <div>Login through Google</div>} />
+            <Route
+              path='/users'
+              render={() => <UsersContainer pageTitle={'Users'} />}
+            />
+            <Route
+              path='/login/google'
+              render={() => <div>Login through Google</div>}
+            />
             <Route path='/login' render={() => <LoginContainer />} />
             <Route path='/news' render={() => <NewsContainer />} />
             <Route path='/music' render={() => <MusicContainer />} />
@@ -62,7 +79,6 @@ class App extends React.Component {
             <Redirect exact from='/' to='/profile' />
             <Route path='*' render={() => <NotFoundPage />} />
           </Switch>
-
         </div>
       </MainWrapStateContainer>
     )
