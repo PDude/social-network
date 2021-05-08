@@ -7,9 +7,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Use E-mail to enter:
-
-### dudich.pasha@gmail.com
+### `dudich.pasha@gmail.com`
 
 Use password to enter:
-
-### randompass
+### `randompass`
